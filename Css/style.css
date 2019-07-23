@@ -1,0 +1,484 @@
+﻿/*
+ Theme Name:   WP Bootstrap 4 (Child) - Xpring
+ description: >-
+   A child theme of the Bootstrap 4 WordPress theme
+ Author:       Calvin Jhunjhnuwala
+ Template:     wp-bootstrap-4
+ Version:      1.1.4
+*/
+
+
+/*  NEW STYLING ! NEW STYLING ! NEW STYLING ! */
+/* GENERAL STYLINGS */
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+body {
+    max-width: 100%;
+	overflow-x: hidden;
+	background: #FFFFFF;
+}
+body.no-overflow {
+	overflow: hidden;
+}
+section {
+	padding: 88px 0;
+}
+
+.flex {
+	display: flex;
+}
+.m-t-3 {
+	margin-top: 3rem;
+}
+.m-b-1-5 {
+	margin-bottom: 1.5rem;
+}
+.text-align-center {
+	text-align: center;
+}
+.relative {
+	position: relative;
+}
+.text-green {
+	color: #2FD184;
+}
+.text-green:hover {
+	color: #2FD184;	
+}
+.right-arrow {
+	width: 24px;
+	margin-top: -3px;
+}
+.float-right {
+	float: right;
+}
+
+/* FONT STYLES */
+h1, h2, h3, h4, .button {
+	font-family: 'Space Mono', monospace;
+}
+h1 {
+	font-size: 48px;
+	line-height: 66px;
+	margin-bottom: 40px;
+}
+h2 {
+	font-size: 48px;
+	line-height: 66px;
+	margin-bottom: 36px;
+}
+h3 {
+	font-size: 18px;
+}
+p {
+	max-width: 880px;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-weight: 300;
+	line-height: 1.6;
+}
+a {
+	cursor: pointer;
+}
+.button {
+    max-width: 100%;
+	padding: 8px 16px;
+	border: 1px solid #000000;
+	font-size: 18px;
+	transition-duration: .4s;
+	transition-timing-function: ease-in-out;
+}
+.button-black {
+	background: transparent;
+	color: #000000;
+}
+.button-black:hover {
+	background: transparent;
+	color: #000000;
+}
+.button-green {
+	background: transparent;
+	color: #FFFFFF;
+}
+p.p-large {
+	font-size: 20px;
+	line-height: 38px;
+}
+p.p-small {
+	font-size: 14px;
+	line-height: 28px;
+}
+.bg-grey {
+	background: #F8F8F8 !important;
+}
+.bg-green {
+	background: #2FD184;
+}
+.short-text {
+	max-width: 515px;
+}
+.container h2 {
+	max-width: 880px;
+}
+@media only screen and (max-width: 767px) {
+	h1, h2 {
+		font-size: 24px;
+		line-height: 1.5;
+		margin-bottom: 32px;
+	}
+	p.p-large {
+		max-width: calc(100% - 88px);
+		font-size: 14px;
+		line-height: 25px;
+	}
+}
+
+/* HEADER */
+header {
+	padding: 32px 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+	background: #FFFFFF;
+	z-index: 9999;
+	transition-timing-function: ease-in;
+  	transition: 0.4s;
+}
+header.sticky {
+	position: fixed;
+	-webkit-box-shadow: 0px 6px 14px -9px rgba(130,130,130,1);
+	-moz-box-shadow: 0px 6px 14px -9px rgba(130,130,130,1);
+	box-shadow: 0px 6px 14px -9px rgba(130,130,130,1);
+}
+header #header-logo {
+	width: 93px;
+}
+header .links-wrapper a {
+	font-family: 'Space Mono', monospace;
+	color: #000000;
+	font-size: 14px;
+	margin-left: 4rem;
+	padding-bottom: 0.125rem;
+	border-bottom: 3px solid transparent;
+}
+header .links-wrapper a:hover {
+	text-decoration: none;
+	border-bottom: 3px solid #000000;
+}
+header .links-wrapper a.active {
+	text-decoration: none;
+	border-bottom: 3px solid #2FD184;
+}
+.hamburger {
+	position: absolute;
+	right: 0;
+	top: -13px;
+	padding: 16px;
+	cursor: pointer;
+	display: none;
+}
+.hamburger span {
+	display: block;
+	height: 3px;
+	width: 21px;
+	margin: 3px 0;
+	background-color: #000000;
+	transition-timing-function: ease-in;
+  	transition: 0.4s;
+}
+@media only screen and (max-width: 992px) {
+	.links-wrapper a {
+		display: none;
+	}
+	.hamburger {
+		display: block;
+	}
+	header.open {
+		position: fixed;
+		background: #E5E5E5;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 2;
+		height: 100%;
+		width: 100%;
+	    max-width: 100%;
+	}
+	header.open .links-wrapper {
+		margin: 3.5rem auto;
+		text-align: center;
+	}
+	header.open .links-wrapper a {
+		display: block;
+		margin: 1.25rem 0;
+		font-size: 18px;
+	}
+	header.open .hamburger span:nth-child(1) {
+		margin-top: 3px;
+		transform: rotate(-135deg) translateY(-5px) translateX(0px);
+	}
+	header.open .hamburger span:nth-child(2) {
+		opacity: 0;
+		color: transparent;
+	}
+	header.open .hamburger span:nth-child(3) {
+		transform: rotate(135deg) translateY(8px) translateX(-4px);
+	}
+	.header-links {
+		float: none !important;
+	}
+}
+
+/* FOOTER */
+footer {
+	width: 100%;
+	padding: 32px 16px;
+	background: #000000;
+	color: #FFFFFF;
+	text-align: right;
+    font-size: 14px;
+}
+
+/* SECTIONAL STYLINGS */
+.hero {
+	padding: 54px 0 232px;
+}
+.hero h1 {
+	max-width: 590px;
+}
+#hero.top-padding {
+	padding-top: 140px;
+}
+#hero-images {
+	position: absolute;
+	top: -32px;
+	right: 0;
+	z-index: -1;
+}
+#hero-still {
+	max-width: 100%;
+}
+#bg-green {
+	position: absolute;
+	z-index: 9;
+	width: 513px;
+	top: calc(50% + 92px);
+	right: 96px;
+}
+.green-square {
+	position: absolute;
+	z-index: -2;
+	height: 336px;
+	width: 375px;
+	background: #2FD184;
+	top: 192px;
+	left: -280px;
+}
+@media only screen and (max-width: 1200px) {
+	.hero {
+		padding: 54px 0 160px;
+	}
+	#hero-images {
+		position: relative;
+		top: 32px;
+		width: 100%;
+		text-align: right;
+	}
+	.green-square {
+		top: 26vmin;
+		left: 280px;
+	}
+	#bg-green {
+		width: 450px;
+		position: relative;
+		max-width: 100%;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.hero {
+		padding: 54px 0 80px;
+	}
+	.green-square {
+		left: 0;
+		height: 46vmin;
+		width: 48vmin;
+		max-width: 375px;
+		max-height: 336px;
+	}
+	#hero-still, #contact-still {
+		width: 62vmin;
+		max-width: 450px;
+	}
+	#bg-green {
+		width: 71vmin;
+		right: 32px;
+		max-width: 400px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.hero {
+		padding-top: 16px;
+	}
+	.green-square {
+		top: 132px;
+	}
+}
+
+/* INFRASTRUCTURE SECTION */
+.section-infra {
+	margin-top: 48px;
+}
+.section-infra p.p-small {
+	margin-top: 1.5rem;
+	max-width: 254px;
+}
+.section-infra h3 {
+	margin-top: 4px;
+}
+@media only screen and (max-width: 767px) {
+	.section-infra p.p-small {
+		max-width: 100%;
+	}
+}
+
+.img-holder {
+	padding-right: 24px;
+}
+.partner-logo {
+	margin: 2rem 0;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partner-logo img {
+	max-width: 100%;
+	transition-timing-function: ease-in;
+  	transition: 0.25s;
+	filter: brightness(0) saturate(100%) grayscale(100%);
+}
+.partner-logo:hover img {
+	filter: none;
+}
+.bg-section {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 40%;
+	background-image: url("../Images/bg-pattern.png");
+	background-repeat: repeat;
+	background-size: 125px;
+}
+.fifty { 
+	width: 50%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+@media only screen and (min-width: 767px) {
+	.flex-until-small {
+		display: flex;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.bg-section {
+	    width: 80px;
+	    background-size: 80px;
+	}
+	.fifty {
+		margin-top: 3rem;
+		width: 100%;
+	}
+}
+.fifty a {
+	display: block;
+	font-size: 14px;
+	line-height: 28px;
+	margin: 0 0 0.5rem;
+	color: #000000;
+	text-decoration: underline;
+}
+.fifty a:hover {
+	color: #000000;
+	text-decoration: none;
+}	
+
+/* JOBS SECTION */
+#jobs .col-md-4 {
+	margin-bottom: 24px;
+}
+.job-holder {
+	max-width: 290px;
+	padding: 24px 24px 28px;
+	background: #2FD184;
+}
+.job-holder h4 {
+	margin: 8px 0 16px;
+	font-size: 18px;
+	line-height: 27px;
+}
+.job-holder p {
+	margin-bottom: 24px;
+}
+.job-holder p,
+.job-holder .button {
+	font-size: 14px;
+}
+.job-flex{
+	display: flex;
+	vertical-align: middle;
+	align-items: center;
+}
+	
+/* CONTACT SECTION */
+section#contact {
+	height: 712px;
+	padding-bottom: 80px;
+}
+#contact-images {
+	position: absolute;
+	top: -80px;
+	right: 0;
+	z-index: -1;
+}
+#bg-green-2 {
+	position: absolute;
+	width: 512px;
+	z-index: 2;
+	top: 200px;
+	right: 48px;
+}
+@media only screen and (max-width: 1200px) {
+	section#contact {
+		height: auto !important;
+	}
+	#contact-images {
+		margin-bottom: 112px;
+		width: 100%;
+		position: relative;
+		text-align: right;
+	}
+	#bg-green-2 {
+		max-width: 100%;
+	}
+}
+@media only screen and (max-width: 767px) {
+	#bg-green-2 {
+		width: 71vmin;
+		right: 32px;
+		max-width: 512px;
+	}
+}
